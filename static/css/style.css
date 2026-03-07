@@ -315,6 +315,59 @@ footer {
 }
 
 /* ── Modos para .table-app ─────────────────────────── */
+/* ── Modo oscuro — general ───────────────────────────── */
+body.dark-mode {
+    background-color: #0d1a20 !important;
+    color: #F1E9DB !important;
+}
+body.dark-mode .body-wrap,
+body.dark-mode main {
+    background-color: #0d1a20 !important;
+    color: #F1E9DB !important;
+}
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode aside {
+    background-color: #060e11 !important;
+    color: #F1E9DB !important;
+    border-color: #931F1D !important;
+}
+body.dark-mode .card {
+    background-color: #0d1a20 !important;
+    border-color: #931F1D !important;
+}
+body.dark-mode .card-header     { border-color: #931F1D !important; }
+body.dark-mode .card-title      { color: #F1E9DB !important; }
+body.dark-mode .card-title i    { color: #0DCAF0 !important; }
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea,
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #16262E !important;
+    color: #F1E9DB !important;
+    border-color: #931F1D !important;
+}
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder { color: #9F86C0 !important; opacity: 0.8; }
+body.dark-mode label,
+body.dark-mode .form-label      { color: #F1E9DB !important; }
+body.dark-mode .nav-link        { color: #9F86C0 !important; }
+body.dark-mode .nav-link.active { color: #0DCAF0 !important; background-color: rgba(13,202,240,0.12) !important; border-left-color: #0DCAF0 !important; }
+body.dark-mode .nav-link:hover  { color: #F1E9DB !important; background-color: rgba(159,134,192,0.07) !important; }
+body.dark-mode .header-brand    { color: #0DCAF0 !important; }
+body.dark-mode .header-user     { color: #9F86C0 !important; }
+body.dark-mode h1, body.dark-mode h2,
+body.dark-mode h3, body.dark-mode h4,
+body.dark-mode h5, body.dark-mode h6 { color: #F1E9DB !important; }
+body.dark-mode small            { color: #9F86C0 !important; }
+body.dark-mode .text-white      { color: #F1E9DB !important; }
+body.dark-mode .text-secondary  { color: #9F86C0 !important; }
+body.dark-mode .text-light      { color: #F1E9DB !important; }
+body.dark-mode .border-secondary { border-color: rgba(147,31,29,0.3) !important; }
+body.dark-mode tbody tr:hover   { background-color: rgba(13,202,240,0.05) !important; }
+
+/* ── Modo oscuro — tabla ─────────────────────────────── */
 body.dark-mode .table-app {
     --bs-table-bg: #0d1a20;
     --bs-table-color: #F1E9DB;
@@ -374,6 +427,13 @@ body.light-mode .btn-outline-pur { border-color: #931F1D !important; color: #931
 body.light-mode .btn-outline-pur:hover { background-color: rgba(147,31,29,0.1) !important; color: #16262E !important; }
 body.light-mode .form-label      { color: #16262E !important; }
 body.light-mode .text-secondary  { color: #7a5c44 !important; }
+body.light-mode .text-white      { color: #16262E !important; }
+body.light-mode .text-light      { color: #16262E !important; }
+body.light-mode h1, body.light-mode h2,
+body.light-mode h3, body.light-mode h4,
+body.light-mode h5, body.light-mode h6 { color: #16262E !important; }
+body.light-mode small            { color: #7a5c44 !important; }
+body.light-mode .border-bottom.border-secondary { border-color: rgba(147,31,29,0.25) !important; }
 
 /* ── Modo claro — modales ────────────────────────────── */
 body.light-mode .modal-content {
@@ -438,6 +498,64 @@ body.light-mode .table-app th         { color: #931F1D !important; border-color:
 body.light-mode .table-app tbody tr:hover td { background-color: rgba(147,31,29,0.07) !important; }
 body.light-mode .table-responsive     { background-color: #F1E9DB !important; }
 body.light-mode .card .table-responsive { background-color: #F1E9DB !important; }
+
+
+/* ── Modo claro — textos del modal ──────────────────── */
+body.light-mode .modal-content,
+body.light-mode .modal-content [style*="background-color: #16262E"],
+body.light-mode .modal-content [style*="background-color:#16262E"] {
+    background-color: #e8ddd0 !important;
+    color: #16262E !important;
+}
+body.light-mode .modal .text-white        { color: #16262E !important; }
+body.light-mode .modal .text-secondary    { color: #7a5c44 !important; }
+body.light-mode .modal .text-info         { color: #931F1D !important; }
+body.light-mode .modal .text-light        { color: #16262E !important; }
+body.light-mode .modal .modal-title       { color: #16262E !important; }
+body.light-mode .modal .modal-title i     { color: #931F1D !important; }
+body.light-mode .modal .fw-semibold,
+body.light-mode .modal .fw-bold           { color: #16262E !important; }
+body.light-mode .modal li span.text-white { color: #16262E !important; }
+body.light-mode .modal small.text-secondary { color: #7a5c44 !important; }
+body.light-mode .modal p.text-info        { color: #931F1D !important; }
+body.light-mode .modal .btn-close-white {
+    filter: none !important;
+    --bs-btn-close-color: #16262E;
+}
+body.light-mode .modal .border-secondary  { border-color: rgba(147,31,29,0.3) !important; }
+
+/* ── Modo oscuro — textos del modal ─────────────────── */
+body.dark-mode .modal-content,
+body.dark-mode .modal-content [style*="background-color: #16262E"] {
+    background-color: #060e11 !important;
+    color: #F1E9DB !important;
+}
+body.dark-mode .modal .text-white         { color: #F1E9DB !important; }
+body.dark-mode .modal .text-secondary     { color: #9F86C0 !important; }
+body.dark-mode .modal .text-info          { color: #0DCAF0 !important; }
+body.dark-mode .modal .text-light         { color: #F1E9DB !important; }
+body.dark-mode .modal .modal-title        { color: #F1E9DB !important; }
+body.dark-mode .modal .form-label         { color: #F1E9DB !important; }
+body.dark-mode .modal input,
+body.dark-mode .modal select,
+body.dark-mode .modal textarea {
+    background-color: #0d1a20 !important;
+    color: #F1E9DB !important;
+    border-color: #931F1D !important;
+}
+body.dark-mode .modal .modal-header       { border-bottom-color: rgba(147,31,29,0.4) !important; }
+body.dark-mode .modal .modal-footer       { border-top-color: rgba(147,31,29,0.4) !important; }
+body.dark-mode .modal .border-secondary   { border-color: rgba(147,31,29,0.3) !important; }
+
+/* ── Modo oscuro — labels y textos generales ─────────── */
+body.dark-mode .form-label       { color: #F1E9DB !important; }
+body.dark-mode label             { color: #F1E9DB !important; }
+body.dark-mode .text-white       { color: #F1E9DB !important; }
+body.dark-mode .text-secondary   { color: #9F86C0 !important; }
+body.dark-mode h1, body.dark-mode h2,
+body.dark-mode h3, body.dark-mode h4,
+body.dark-mode h5, body.dark-mode h6 { color: #F1E9DB !important; }
+body.dark-mode small             { color: #9F86C0 !important; }
 
 /* ════════════════════════════════════════════════════════════
    WIDGET DE ACCESIBILIDAD
