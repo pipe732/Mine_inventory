@@ -375,6 +375,51 @@ body.light-mode .btn-outline-pur:hover { background-color: rgba(147,31,29,0.1) !
 body.light-mode .form-label      { color: #16262E !important; }
 body.light-mode .text-secondary  { color: #7a5c44 !important; }
 
+/* ── Modo claro — modales ────────────────────────────── */
+body.light-mode .modal-content {
+    background-color: #e8ddd0 !important;
+    color: #16262E !important;
+    border-color: #931F1D !important;
+}
+body.light-mode .modal-header {
+    background-color: #e0d4c3 !important;
+    border-bottom-color: #931F1D !important;
+}
+body.light-mode .modal-footer {
+    background-color: #e0d4c3 !important;
+    border-top-color: #931F1D !important;
+}
+body.light-mode .modal-body {
+    background-color: #e8ddd0 !important;
+    color: #16262E !important;
+}
+body.light-mode .modal-title     { color: #16262E !important; }
+body.light-mode .modal-title i   { color: #931F1D !important; }
+body.light-mode .btn-close-white { filter: invert(1) brightness(0.3) !important; }
+body.light-mode .modal input,
+body.light-mode .modal select,
+body.light-mode .modal textarea {
+    background-color: #F1E9DB !important;
+    color: #16262E !important;
+    border-color: #931F1D !important;
+}
+body.light-mode .modal input::placeholder,
+body.light-mode .modal textarea::placeholder { color: #9F86C0 !important; }
+body.light-mode .modal .form-label    { color: #16262E !important; }
+body.light-mode .modal .text-secondary { color: #7a5c44 !important; }
+body.light-mode .modal .border-bottom { border-color: rgba(147,31,29,0.3) !important; }
+body.light-mode .modal .border-secondary { border-color: rgba(147,31,29,0.3) !important; }
+body.light-mode .modal table {
+    --bs-table-bg: #F1E9DB !important;
+    background-color: #F1E9DB !important;
+}
+body.light-mode .modal tbody tr { background-color: #F1E9DB !important; }
+body.light-mode .modal tbody td { background-color: #F1E9DB !important; color: #16262E !important; }
+body.light-mode .modal thead tr { background-color: rgba(147,31,29,0.08) !important; }
+body.light-mode .modal th       { color: #931F1D !important; border-color: #931F1D !important; }
+body.light-mode .modal td       { color: #16262E !important; border-color: rgba(147,31,29,0.25) !important; }
+body.light-mode .modal .table-responsive { background-color: #F1E9DB !important; }
+
 /* ── Modo claro — tabla ──────────────────────────────── */
 body.light-mode .table-app {
     --bs-table-bg: #F1E9DB;
