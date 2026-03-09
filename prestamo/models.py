@@ -1,7 +1,7 @@
 from django.db import models
 class Prestamo(models.Model):
     id_prestamo = models.AutoField(primary_key=True)
-    herramienta = models.ForeignKey(Herramienta, on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
+    codigo = models.ForeignKey(codigo, on_delete=models.PROTECT, db_column='id_codigo')  # Relación a tabla codigo (no mostrada en diagrama)
     numero_documento = models.ForeignKey(
         'Usuario',
         to_field='numero_documento',
@@ -32,7 +32,7 @@ class DetallePrestamo(models.Model):
         db_column='id_prestamo',
         related_name='detalles'
     )
-    herramienta = models.ForeignKey(Herramienta, on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
+    codigo = models.ForeignKey(codigo, on_delete=models.PROTECT, db_column='id_codigo')  # Relación a tabla codigo (no mostrada en diagrama)
     cantidad = models.PositiveIntegerField()
 
     class Meta:
@@ -44,24 +44,24 @@ class DetallePrestamo(models.Model):
         return f'Detalle #{self.id_detalle_prestamo} - Préstamo #{self.id_prestamo_id}'
 
 
-class DevolucionHerramienta(models.Model):
-    id_devolucion_herramienta = models.AutoField(primary_key=True)
+class Devolucioncodigo(models.Model):
+    id_devolucion_codigo = models.AutoField(primary_key=True)
     id_detalle_prestamo = models.ForeignKey(
         DetallePrestamo,
         on_delete=models.PROTECT,
         db_column='id_detalle_prestamo',
         related_name='devoluciones'
     )
-    id_herramienta = models.ForeignKey(Herramienta, on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
+    id_codigo = models.ForeignKey(codigo, on_delete=models.PROTECT, db_column='id_codigo')  # Relación a tabla codigo (no mostrada en diagrama)
     observaciones = models.TextField(blank=True, null=True)
 
     class Meta:
-        db_table = 'devolucion_herramienta'
-        verbose_name = 'Devolución de Herramienta'
-        verbose_name_plural = 'Devoluciones de Herramienta'
+        db_table = 'devolucion_codigo'
+        verbose_name = 'Devolución de codigo'
+        verbose_name_plural = 'Devoluciones de codigo'
 
     def __str__(self):
-        return f'Devolución #{self.id_devolucion_herramienta}'
+        return f'Devolución #{self.id_devolucion_codigo}'
 
 
 # ──────────────────────────────────────────────
