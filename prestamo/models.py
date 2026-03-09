@@ -1,7 +1,7 @@
 from django.db import models
 class Prestamo(models.Model):
     id_prestamo = models.AutoField(primary_key=True)
-    herramienta = models.ForeignKey('Herramienta', on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
+    herramienta = models.ForeignKey(Herramienta, on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
     numero_documento = models.ForeignKey(
         'Usuario',
         to_field='numero_documento',
@@ -32,7 +32,7 @@ class DetallePrestamo(models.Model):
         db_column='id_prestamo',
         related_name='detalles'
     )
-    herramienta = models.ForeignKey('Herramienta', on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
+    herramienta = models.ForeignKey(Herramienta, on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
     cantidad = models.PositiveIntegerField()
 
     class Meta:
@@ -52,7 +52,7 @@ class DevolucionHerramienta(models.Model):
         db_column='id_detalle_prestamo',
         related_name='devoluciones'
     )
-    id_herramienta = models.ForeignKey('Herramienta', on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
+    id_herramienta = models.ForeignKey(Herramienta, on_delete=models.PROTECT, db_column='id_herramienta')  # Relación a tabla herramienta (no mostrada en diagrama)
     observaciones = models.TextField(blank=True, null=True)
 
     class Meta:
