@@ -1,7 +1,13 @@
 from django.db import models
 
 class CategoriaHerramienta(models.Model):
-    nombre = models.CharField(max_length=100)
+    ESTADO_CHOICES = [
+        ('Herramienta', 'Herramienta'),
+        ('Maquinaria', 'Maquinaria'),
+        ('Equipo de Protección Personal', 'Equipo de Protección Personal'),
+        ('Consumible', 'Consumible'),
+        ('Otro', 'Otro'),
+    ]
 
     def __str__(self):
         return self.nombre
@@ -10,9 +16,7 @@ class CategoriaHerramienta(models.Model):
         verbose_name = "Categoría"
         verbose_name_plural = "Categorías"
 
-
 class Stock(models.Model):
-
     ESTADO_CHOICES = [
         ('disponible', 'Disponible'),
         ('prestado',   'Prestado'),
