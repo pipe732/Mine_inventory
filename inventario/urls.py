@@ -1,9 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from inventario.views import inventario, agregar_herramienta, editar_herramienta
 
 urlpatterns = [
-    path('admin/', admin.site.urls), # Fixed .py to .urls
-    path('mine/', include('mine_inventory.urls')),
-    path('prestamo/', include('prestamo.urls')), 
-    path('inventario/', include('inventario.urls')), # Added URL pattern for inventario app
+    path('',          inventario,           name='inventario'),
+    path('agregar/',  agregar_herramienta,  name='agregar_herramienta'),
+    path('editar/<int:pk>/', editar_herramienta, name='editar_herramienta'),
 ]

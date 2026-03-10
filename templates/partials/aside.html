@@ -50,6 +50,10 @@
           <li class="nav-item">
             <a class="nav-link text-cream py-1" href="{% url 'estado_list' %}">
               <i class="bi bi-activity"></i> Ver Estado Actual
+        </li>
+        <li>
+            <a href="{% url 'inventario' %}" class="nav-link {% if request.resolver_match.url_name == 'inventario' %}active{% endif %}">
+                <i class="bi bi-box-seam"></i> Inventario
             </a>
           </li>
           <hr class="border-secondary my-1">
@@ -73,4 +77,17 @@
       </a>
     </li>
   </ul>
+</aside>
+        </li>
+        <li>
+            <a href="#" class="nav-link">
+                <i class="bi bi-file-earmark-bar-graph"></i> Reportes
+            </a>
+        </li>
+        <li class="nav-spacer">
+            <a href="#" class="nav-link">
+                <i class="ti ti-user"></i> Inicio de Seccion / Registro
+            </a>
+        </li>
+    </ul>
 </aside>
