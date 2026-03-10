@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mine_inventory',
     'prestamo',
-    'inventario',
+    'mantenimiento', #modulo de Albert
 ]
 
 MIDDLEWARE = [
