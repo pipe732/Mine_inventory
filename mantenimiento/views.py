@@ -53,3 +53,4 @@ def crear_bitacora_mantenimiento(request):
         'form_detalle': form_detalle,
         'titulo': 'Registrar Nuevo Mantenimiento'
     })
+    
