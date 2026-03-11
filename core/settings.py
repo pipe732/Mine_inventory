@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'mine_inventory',
     'prestamo',
     'mantenimiento', #modulo de Albert
+    'inventario',
 ]
 
 MIDDLEWARE = [
