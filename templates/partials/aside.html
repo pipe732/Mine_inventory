@@ -7,7 +7,7 @@
     </li>
 
     <li>
-      <a href="#" class="nav-link">
+      <a href="{% url 'inventario' %}" class="nav-link {% if request.resolver_match.url_name == 'inventario' %}active{% endif %}">
         <i class="bi bi-box-seam"></i> Inventario
       </a>
     </li>
@@ -17,13 +17,6 @@
         <i class="bi bi-box-arrow-right"></i> Prestamos
       </a>
     </li>
-
-    <li>
-      <a href="#" class="nav-link">
-        <i class="bi bi-plus-circle"></i> Nuevo Registro
-      </a>
-    </li>
-
     <li>
       <a href="#" class="nav-link">
         <i class="bi bi-file-earmark-bar-graph"></i> Reportes
@@ -43,27 +36,27 @@
       <div class="collapse" id="menuMantenimiento">
         <ul class="nav flex-column ms-3 mt-1" style="font-size: 0.9rem">
           <li class="nav-item">
-            <a class="nav-link text-cream py-1" href="{% url 'mantenimiento_list' %}">
+            <a class="nav-link text-cream py-1" href="{% url 'mantenimiento_list' %}" class= "nav-link {% if request.resolver_match.url_name == 'mantenimiento_list' %}active{% endif %}">
               <i class="bi bi-card-list"></i> Ver Detalles (Historial)
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-cream py-1" href="{% url 'estado_list' %}">
+            <a class="nav-link text-cream py-1" href="{% url 'estado_list' %}" class= "nav-link {% if request.resolver_match.url_name == 'mantenimiento_list' %}active{% endif %}">
               <i class="bi bi-activity"></i> Ver Estado Actual
         </li>
         <li>
-            <a href="{% url 'inventario' %}" class="nav-link {% if request.resolver_match.url_name == 'inventario' %}active{% endif %}">
+            <a href="{% url 'inventario' %}" class= "nav-link {% if request.resolver_match.url_name == 'mantenimiento_list' %}active{% endif %}">
                 <i class="bi bi-box-seam"></i> Inventario
             </a>
           </li>
           <hr class="border-secondary my-1">
           <li class="nav-item">
-            <a class="nav-link text-info py-1 fw-bold" href="{% url 'crear_bitacora_mantenimiento' %}">
+            <a class="nav-link text-info py-1 fw-bold" href="{% url 'crear_bitacora_mantenimiento' %} " class= "nav-link {% if request.resolver_match.url_name == 'mantenimiento_list' %}active{% endif %}">
               <i class="bi bi-plus-circle-fill"></i> Registrar Mantenimiento
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning py-1 fw-bold" href="{% url 'mantenimiento_crear' %}">
+            <a class="nav-link text-warning py-1 fw-bold" href="{% url 'mantenimiento_crear' %}" class= "nav-link {% if request.resolver_match.url_name == 'mantenimiento_list' %}active{% endif %}">
               <i class="bi bi-plus-square-fill"></i> Registrar Estado
             </a>
           </li>
@@ -71,23 +64,9 @@
       </div>
     </li>
 
-    <li class="nav-spacer">
-      <a href="#" class="nav-link">
-        <i class="bi bi-gear"></i> Configuración
-      </a>
-    </li>
-  </ul>
-</aside>
-        </li>
-        <li>
-            <a href="#" class="nav-link">
-                <i class="bi bi-file-earmark-bar-graph"></i> Reportes
-            </a>
-        </li>
         <li class="nav-spacer">
             <a href="#" class="nav-link">
                 <i class="ti ti-user"></i> Inicio de Seccion / Registro
             </a>
-        </li>
-    </ul>
+  </ul>
 </aside>

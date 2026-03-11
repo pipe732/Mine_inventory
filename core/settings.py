@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mine_inventory',
+    'inventario',
     'prestamo',
     'mantenimiento', #modulo de Albert
 ]
